@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MaxFit</string>
+    <string name="title">Max Fit</string>
+    <string name="title_activity_nutritions">NutritionsActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_activity_workout">WorkoutActivity</string>
+    <string name="title_dashboard">Workout</string>
+    <string name="title_notifications">Nutritions</string>
+    <string name="title_activity_dashboard">DashboardActivity</string>
+    <string name="steps">4856</string>
+</resources>

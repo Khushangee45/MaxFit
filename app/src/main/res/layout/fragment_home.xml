@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment" >
+
+    <LinearLayout
+        android:id="@+id/nav_host_fragment_activity_dashboard"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#F7F8FA"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp">
+
+        <TextView
+            android:text="Welcome, User 👋"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp">
+
+            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                android:id="@+id/circularProgressBar"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                app:cpb_progressbar_color="#6200EE"
+                app:cpb_background_progressbar_color="#E0E0E0"
+                app:cpb_progressbar_width="12dp"
+                app:cpb_background_progressbar_width="12dp"
+                app:cpb_round_border="true"
+                app:cpb_start_angle="0" />
+
+            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                android:id="@+id/circularProgressBarHeart"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:cpb_progressbar_color="#07DCC0"
+                app:cpb_background_progressbar_color="#E0E0E0"
+                app:cpb_progressbar_width="12dp"
+                app:cpb_background_progressbar_width="12dp"
+                android:layout_gravity="center"
+                app:cpb_round_border="true"
+                app:cpb_start_angle="0" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+                <TextView
+                    android:id="@+id/progressTextHeart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="10"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:textColor="#07DCC0"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/progressText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textColor="#6200EE"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:weightSum="3"
+            android:layout_marginBottom="20dp">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:weightSum="3"
+                android:layout_marginBottom="20dp">
+
+                <include layout="@layout/card_stat" />
+                <include layout="@layout/card_steps" />
+                <include layout="@layout/card_cal" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:text="Today's Activity"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="Workout: 45 min • Sleep: 7 hrs • Water: 5 cups"
+            android:layout_marginBottom="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="+ Add Activity"
+            android:background="@drawable/rounded_bg_purple"
+            android:textColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
